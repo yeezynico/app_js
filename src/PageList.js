@@ -1,4 +1,4 @@
-
+const API_KEY = '7a138768c99c48a8be4faf7c29cccb0c';
 
 const PageList = (argument = '') => {
   const preparePage = () => {
@@ -42,3 +42,5 @@ const PageList = (argument = '') => {
 
   render();
 };
+
+export default PageList;

@@ -1,0 +1,14 @@
+
+$primary-color: rgb(255, 0, 0);
+$bg: rgb(0, 0, 0);
+
+h1 {
+  color: $primary-color;
+  background-color: $bg;
+}
+
+.test{
+  display: flex;
+  align-items: center;
+  background-color: rgb(202, 202, 10);
+}
