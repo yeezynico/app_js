@@ -5,7 +5,7 @@ const PageDetail = (argument) => {
     const cleanedArgument = argument.trim().replace(/\s+/g, "-");
 
     const displayGame = (gameData) => {
-      const { name, released, description, background_image, developers, genres, tags, publishers, platforms, website, video, rating, metacritic, screenshots, stores} = gameData;
+      const { name, released, description, background_image, developers, genres, tags, publishers, platforms, website, video, rating, metacritic, screenshots, stores } = gameData;
       const articleDOM = document.querySelector(".page-detail .article");
       articleDOM.querySelector("h1.title").innerHTML = name;
       articleDOM.querySelector("img.game-image").src = background_image;
@@ -15,13 +15,14 @@ const PageDetail = (argument) => {
       articleDOM.querySelector("p.tag").innerHTML = tags[0].name;
       articleDOM.querySelector("p.genre").innerHTML = genres[0].name;
       articleDOM.querySelector("p.publisher").innerHTML = publishers[0].name;
-      articleDOM.querySelector("p.platform").innerHTML = platforms[0].name; // sa marche pooo
+      articleDOM.querySelector("p.platform").innerHTML = platforms.map(platform => platform.platform.name).join(", ");
       articleDOM.querySelector("p.web").innerHTML = website;
       // Une vidéo de présentation (Lecteur HTML 5 interne)
       articleDOM.querySelector("p.note span").innerHTML = rating;
       articleDOM.querySelector("p.meta span").innerHTML = metacritic;
-      articleDOM.querySelector("img.screenshots").innerHTML = screenshots;
-      articleDOM.querySelector("p.store").innerHTML = stores;
+      articleDOM.querySelector("img.screenshots").innerHTML = screenshots; // marche po
+      articleDOM.querySelector("p.store").innerHTML = stores.map(store => store.store.name).join("<br><br>");
+
     };
 
     const fetchGame = (url, argument) => {

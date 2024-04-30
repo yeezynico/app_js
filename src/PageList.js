@@ -26,13 +26,23 @@ const PageList = (argument = '') => {
         });
     };
 
+    const searchForm = document.getElementById("searchForm");
+    const searchInput = document.getElementById("searchInput");
+
+    // Ajout d'un gestionnaire d'événements pour la soumission du formulaire de recherche
+    searchForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const searchQuery = searchInput.value;
+      fetchList(`https://api.rawg.io/api/games?key=${API_KEY}`, searchQuery);
+    });
+
+    // Chargez les résultats sans recherche initiale
     fetchList(`https://api.rawg.io/api/games?key=${API_KEY}`, cleanedArgument);
-    
   };
 
   const render = () => {
     pageContent.innerHTML = `
-      <section class="page-list">
+      <section class="page-list"> 
         <div class="articles">Loading...</div>
       </section>
     `;
