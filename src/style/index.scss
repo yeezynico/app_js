@@ -1,14 +1,58 @@
+$primary-color: rgb(255, 254, 254);
+$b: black;
+$font: "Google Sans", Roboto, arial, sans-serif;
 
-$primary-color: rgb(255, 0, 0);
-$bg: rgb(0, 0, 0);
-
-h1 {
+body {
   color: $primary-color;
-  background-color: $bg;
+  background-color: $b;
+  font-family: $font;
 }
 
 .test{
   display: flex;
   align-items: center;
-  background-color: rgb(202, 202, 10);
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.surlignage{
+  text-decoration: none;
+}
+
+.test h1{
+  color: #D20A32;
+}
+
+//* barre de recherche 
+#searchInput{
+background-color: $b;
+border: solid rgb(255, 255, 255);
+border-radius: 30px;
+padding: 10px;
+}
+
+#searchForm input::placeholder{
+  color: white;
+}
+
+#searchForm input:focus{
+  outline: none;
+  color: white;
+}
+
+//* image //
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cardGame {
+  flex-basis: calc(33.33% - 30px);
+  margin-bottom: 20px;
+}
+
+.cardGame img {
+  width: 100%;
+  height: auto;
 }

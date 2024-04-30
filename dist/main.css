@@ -1,12 +1,46 @@
 /*!***************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style/index.scss ***!
   \***************************************************************************************************************/
-h1 {
-  color: red;
-  background-color: black; }
+body {
+  color: #fffefe;
+  background-color: black;
+  font-family: "Google Sans", Roboto, arial, sans-serif; }
 
 .test {
   display: flex;
   align-items: center;
-  background-color: #caca0a; }
+  justify-content: space-between;
+  text-decoration: none; }
+
+.surlignage {
+  text-decoration: none; }
+
+.test h1 {
+  color: #D20A32; }
+
+#searchInput {
+  background-color: black;
+  border: solid white;
+  border-radius: 30px;
+  padding: 10px; }
+
+#searchForm input::placeholder {
+  color: white; }
+
+#searchForm input:focus {
+  outline: none;
+  color: white; }
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.cardGame {
+  flex-basis: calc(33.33% - 30px);
+  margin-bottom: 20px; }
+
+.cardGame img {
+  width: 100%;
+  height: auto; }
 
