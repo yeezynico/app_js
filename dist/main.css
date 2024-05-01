@@ -44,3 +44,36 @@ body {
   width: 100%;
   height: auto; }
 
+.game-image {
+  width: 100%; }
+
+.titre_vote {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.note_and_vote {
+  display: flex;
+  align-items: center;
+  color: #D20A32;
+  margin-right: 40px; }
+
+.aligne {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
+.aligne2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.red {
+  color: #D20A32; }
+
+.trailer {
+  width: 100%; }
+
+.trailer iframe {
+  width: 100%; }
+
